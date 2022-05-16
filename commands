@@ -1,0 +1,14 @@
+ 1025  npm install
+ 1027  ng add @ngrx/store
+ 1028  ng add @ngrx/store-devtools
+ 1030  npm start
+ 1032  npm run server
+ 
+ 
+ 1034  ng generate store auth/Auth --module auth.module.ts
+ if above command fail run below 1036 and then rerun 1034
+ 1036  npm i @ngrx/schematics -D
+ 1037  ng generate store auth/Auth --module auth.module.ts
+
+
+ 
