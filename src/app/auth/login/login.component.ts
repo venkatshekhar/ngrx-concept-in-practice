@@ -9,6 +9,7 @@ import {noop} from "rxjs";
 import {Router} from "@angular/router";
 import { AppState } from '../../reducers';
 import { login } from '../auth.actions';
+import { AuthActions } from '../actions-types';
 
 @Component({
   selector: 'login',
@@ -44,7 +45,9 @@ export class LoginComponent implements OnInit {
         tap(user => {
           console.log('user details', user);
           
-          this.store.dispatch(login({user}));
+          const newLoginAction =login({user});
+
+          this.store.dispatch(newLoginAction);
           
           this.router.navigateByUrl('/courses');
         })
