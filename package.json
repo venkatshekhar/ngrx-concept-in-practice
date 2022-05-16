@@ -25,7 +25,8 @@
     "@angular/platform-browser": "^13.0.3",
     "@angular/platform-browser-dynamic": "^13.0.3",
     "@angular/router": "^13.0.3",
-
+    "@ngrx/store": "^13.2.0",
+    "@ngrx/store-devtools": "^13.2.0",
     "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
     "express": "^4.16.2",
