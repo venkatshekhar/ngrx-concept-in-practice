@@ -4,7 +4,7 @@ import * as fromCourses from './reducers/course.reducer';
 
 export const selectCoursesState = createFeatureSelector<CourseState>("courses");
 
-export const selectAllCourses= createSelector(
+export const selectAllCourses = createSelector(
     selectCoursesState,
     fromCourses.selectAll
 )
@@ -27,3 +27,7 @@ export const selectPromoTotal = createSelector(
 );
 
 
+export const areCoursesLoaded = createSelector(
+    selectCoursesState,
+    state => state.allCoursesLoaded
+);

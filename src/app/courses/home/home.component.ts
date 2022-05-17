@@ -20,9 +20,7 @@ import { selectAdvancedCourses, selectBeginnerCourses, selectPromoTotal } from '
 export class HomeComponent implements OnInit {
 
   promoTotal$: Observable<number>;
-
-  loading$: Observable<boolean>;
-
+ 
   beginnerCourses$: Observable<Course[]>;
 
   advancedCourses$: Observable<Course[]>;
@@ -45,7 +43,7 @@ export class HomeComponent implements OnInit {
     this.advancedCourses$ = this.store.pipe(select(selectAdvancedCourses));
 
     this.promoTotal$ = this.store.pipe(select(selectPromoTotal));
-    
+
 
   }
 
