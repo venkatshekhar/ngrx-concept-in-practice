@@ -1,20 +1,24 @@
- 1025  npm install
- 1027  ng add @ngrx/store
- 1028  ng add @ngrx/store-devtools
- 1030  npm start
- 1032  npm run server
+ 1  npm install
+ 2 ng add @ngrx/store
+ 3 ng add @ngrx/store-devtools
+ 4  npm start
+ 5 npm run server
  
  
- 1034  ng generate store auth/Auth --module auth.module.ts
+ 6  ng generate store auth/Auth --module auth.module.ts
 
  https://stackoverflow.com/questions/62725724/schematic-store-not-found-in-collection-schematics-angular
- if above command fail run below 1036 and then rerun 1034
- 1036  npm i @ngrx/schematics -D
- 1037  ng generate store auth/Auth --module auth.module.ts
+ if above command fail run below 7 and then rerun 6
+ 
+ 7  npm i @ngrx/schematics -D
+ 8  ng generate store auth/Auth --module auth.module.ts
 
 
 
 
- 1038 ng add @ngrx/effects
- 1039 ng add @ngrx/router-store@latest
+ 9 ng add @ngrx/effects
+ 10 ng add @ngrx/router-store@latest
+
+
+ 11 ng add @ngrx/entity@latest
 
