@@ -16,5 +16,5 @@
 
 
  1038 ng add @ngrx/effects
-
+ 1039 ng add @ngrx/router-store@latest
 
