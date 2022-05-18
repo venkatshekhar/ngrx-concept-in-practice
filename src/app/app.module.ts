@@ -22,6 +22,7 @@ import { reducers, metaReducers } from './reducers';
 import { AuthGuard } from './auth/auth.guard';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { EntityDataModule } from '@ngrx/data';
 
 
 const routes: Routes = [
@@ -65,6 +66,7 @@ const routes: Routes = [
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
+    EntityDataModule.forRoot({}),
     StoreRouterConnectingModule.forRoot({
       stateKey: 'router',
       routerState: RouterState.Minimal
