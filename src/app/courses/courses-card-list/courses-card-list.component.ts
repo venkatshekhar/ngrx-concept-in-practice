@@ -3,6 +3,7 @@ import {Course} from "../model/course";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import {EditCourseDialogComponent} from "../edit-course-dialog/edit-course-dialog.component";
 import {defaultDialogConfig} from '../shared/default-dialog-config';
+import { CourseEntityService } from '../services/course-entity.service';
 
 @Component({
     selector: 'courses-card-list',
@@ -18,7 +19,8 @@ export class CoursesCardListComponent implements OnInit {
     courseChanged = new EventEmitter();
 
     constructor(
-      private dialog: MatDialog ) {
+      private dialog: MatDialog,
+      private courseService : CourseEntityService ) {
     }
 
     ngOnInit() {
@@ -42,7 +44,12 @@ export class CoursesCardListComponent implements OnInit {
     }
 
   onDeleteCourse(course:Course) {
-
+    // default optimistic  remove in UI before delete from backend
+    this.courseService.delete(course)
+    .subscribe(
+      ()=> console.log("Deleted completed"),
+      err => console.log("Delete Failed", err)
+    )
 
   }
 

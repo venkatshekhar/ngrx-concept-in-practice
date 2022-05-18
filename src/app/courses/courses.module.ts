@@ -37,7 +37,6 @@ export const coursesRoutes: Routes = [
     path: '',
     component: HomeComponent,
     resolve: {
-
       courses: CoursesResolver
     }
   },
@@ -54,7 +53,9 @@ const entityMetadata: EntityMetadataMap = {
   Course: {
     sortComparer: compareCourses,
     entityDispatcherOptions: {
-      optimisticUpdate : true
+      optimisticUpdate : true,
+      // optimisticDelete : false,  // default true
+      //optimisticAdd : false   // default false
     }
   }
 };
